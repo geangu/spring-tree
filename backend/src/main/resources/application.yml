@@ -1,0 +1,35 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  profiles:
+    active: "dev"
+  data:
+    mongodb:
+      repositories:
+        type: reactive
+
+format-date: dd/MM/YYYY
+db-name: tree
+
+---
+
+spring:
+  profiles: dev
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/tree
+      
+host-mongo: 127.0.0.1:27017
+
+---
+
+spring:
+  profiles: prod
+  data:
+    mongodb:
+      uri: mongodb://db/tree
+      
+host-mongo: db
