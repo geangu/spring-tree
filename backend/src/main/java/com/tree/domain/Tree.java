@@ -1,7 +1,5 @@
 package com.tree.domain;
 
-import java.util.Objects;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -44,25 +42,4 @@ public class Tree {
 	public String toString() {
 		return "Tree [id=" + id + ", content=" + content + "]";
 	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id, content);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (obj == null) {
-			return false;
-		}
-		if (!(obj instanceof Tree)) {
-			return false;
-		}
-		Tree other = (Tree) obj;
-		return Objects.equals(id, other.id) && Objects.equals(content, other.content);
-	}
-
 }

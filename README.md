@@ -74,3 +74,21 @@ Se mostrará un mensaje como el siguiente:
 
 	[GET]
 	http://localhost:5000/api/v1/trees
+
+### Iniciar Sonarqube Docker
+
+[Sonarqube](https://hub.docker.com/_/sonarqube)
+
+Ejecutar en la terminal
+
+	docker pull sonarqube
+	docker run -d --name sonarqube -p 9000:9000 sonarqube
+
+### Ejecutar Test unitarios
+
+Para realizar la ejecución de los test unitarios se debe contar con sonarqube instalado en la maquina local
+
+	mvn jacoco:prepare-agent test jacoco:report
+	mvn sonar:sonar
+
+Ver cobertura del código http://localhost:9000/dashboard?id=com:tree

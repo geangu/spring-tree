@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Node {
 
-	public int data;
-	public Node left;
-	public Node right;
+	int data;
+	Node left;
+	Node right;
 
 	private List<Integer> path1 = new ArrayList<>();
 	private List<Integer> path2 = new ArrayList<>();
@@ -38,16 +38,6 @@ public class Node {
 		}
 	}
 
-	public void inOrder() {
-		if (this.left != null) {
-			this.left.inOrder();
-		}
-		System.out.print(this.data + ", ");
-		if (this.right != null) {
-			this.right.inOrder();
-		}
-	}
-
 	public int ancestor(int node1, int node2) {
 		path1.clear();
 		path2.clear();
@@ -69,9 +59,6 @@ public class Node {
 	}
 
 	private boolean findPath(Node root, int n, List<Integer> path) {
-		if (root == null) {
-			return false;
-		}
 
 		path.add(root.data);
 
