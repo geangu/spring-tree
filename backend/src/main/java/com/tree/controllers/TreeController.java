@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 import com.tree.domain.Node;
 import com.tree.domain.Tree;
 import com.tree.dto.TreeDTO;
-import com.tree.services.tree.TreeService;
+import com.tree.services.TreeService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

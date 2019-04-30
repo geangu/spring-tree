@@ -1,4 +1,4 @@
-package com.tree.services.tree;
+package com.tree.services;
 
 import com.tree.domain.Tree;
 
